@@ -1,0 +1,350 @@
+@import'header';
+
+@mixin mobile {
+    @media (min-width:288px) and (max-width:1100px) {
+        @content;
+    }
+}
+
+
+
+.hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.1s;
+}
+
+.Main {
+
+    margin-top: 45px;
+    max-width: 1250px;
+
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px 10px;
+    }
+
+
+    &-about {
+
+
+
+        &-title {
+
+            @include mobile {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            img {
+                height: 300px;
+                width: 300px;
+                border-radius: 100%;
+
+                @include mobile {
+                    width: 100px;
+                    height: 100px;
+                }
+
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+            }
+
+            h3 {
+                margin-top: 25px;
+                padding-bottom: 10px;
+                font-size: 1.5rem;
+
+                @include mobile {
+                    margin-bottom: -15px;
+                }
+
+
+            }
+
+            h4 {
+                padding-bottom: 10px;
+                font-size: 1.5rem;
+                font-weight: 100;
+                color: #b6b8b9;
+            }
+        }
+
+        &-text-button {
+
+
+            @include mobile {
+                margin-top: 15px;
+            }
+
+
+
+            p {
+                margin-bottom: 15px;
+                font-size: 1rem;
+                color: #2b2e31;
+            }
+
+
+
+        }
+
+        &-dsc {
+            margin-top: 25px;
+            font-size: 17px;
+
+        }
+    }
+
+    .location {
+        @include mobile {
+            display: none;
+        }
+
+    }
+
+
+
+    .buttonEdit {
+        width: 100%;
+        height: 38px;
+        border: 1px solid rgba(27, 31, 35, .2);
+        background-color: #eff3f6;
+        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+        border-radius: 4px;
+        font-weight: 600;
+        margin-bottom: 25px;
+
+        &:hover {
+            @extend .hover
+        }
+    }
+
+
+    .button {
+
+        display: none;
+
+        @include mobile {
+            display: inline;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            width: 100%;
+            height: 35px;
+            border: 1px solid rgba(201, 207, 214, 0.2);
+            background-color: white;
+            background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+            border-radius: 5px;
+            font-weight: 400;
+            font-size: 10px;
+            text-align: start;
+            margin-bottom: 5px;
+
+            i {
+                font-size: 15px;
+            }
+        }
+
+    }
+
+
+
+    &-projects {
+
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 30px;
+
+
+        &-links {
+
+            @include mobile {
+                overflow-x: scroll;
+                width: 100%;
+                color: #000;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            a {
+                @include mobile {
+                    display: flex;
+                    align-items: center;
+                }
+
+                margin-right: 50px;
+                color: #24292f;
+                border: 5px solid transparent;
+                border-radius: 5px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                    transition: all 0.3s;
+
+                }
+            }
+
+            font-size: 15px;
+
+
+
+            i {
+                padding: 5px;
+            }
+
+
+
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            min-width: 96%;
+
+            @include mobile {
+                max-width: 70%;
+            }
+
+
+
+
+            &-title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                p {
+                    font-size: 12px;
+
+                }
+
+                i {
+                    color: #57606a;
+                }
+
+            }
+
+            .startp {
+
+                background-color: #f6f8fa;
+                font-size: 12px;
+                height: 55px;
+                width: 800px;
+                border-radius: 5px;
+
+                @include mobile {
+                    max-width: 100%;
+                }
+
+
+
+                p {
+                    margin-left: 45px;
+                    line-height: 55px;
+                }
+            }
+
+            li {
+                list-style-type: disc;
+                margin-left: 25px;
+                line-height: 45px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -10px;
+
+            @include mobile {
+                width: 100%;
+
+            }
+
+            &-title {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+
+                p {
+                    margin-top: 25px;
+                }
+
+                .Customize {
+                    font-size: 12px;
+                }
+            }
+
+
+            .Main-projects-bar {
+
+
+
+
+                padding: 10px;
+                border: 1px solid#d0d7de;
+                width: 49%;
+                margin-top: 20px;
+                margin-right: 7px;
+                position: relative;
+                height: 110px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-radius: 5px;
+                margin-left: auto;
+                margin-bottom: 5px;
+
+                @include mobile {
+                    min-width: 100%;
+                }
+
+                .up {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        border: 1px solid #7c838b;
+                        border-radius: 15px;
+                        font-size: 12px;
+                        height: 20px;
+                        width: 55px;
+                        text-align: center;
+                        color: #616973;
+                    }
+                }
+
+                span {
+                    background-color: #563d7c;
+                    height: 12px;
+                    width: 12px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+
+        }
+
+    }
+}

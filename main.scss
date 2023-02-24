@@ -1,0 +1,32 @@
+
+@import'normalize';
+@import'formalize';
+@import'Veriables';
+@import'header';
+@import 'content';
+
+@mixin mobile {
+    @media (min-width:288px) and (max-width: 700px) {
+      @content;
+    }
+  }
+  @mixin tablet {
+    @media (min-width: 701px) and (max-width: 1100px) {
+      @content;
+    }
+  }
+
+.icon{
+    display:inline-block;
+    width:1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    
+}
+
+a.p{
+    font-size: $my-font;
+}
+
